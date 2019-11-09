@@ -266,7 +266,7 @@ MIN_RATIO, MAX_RATIO는 boundingRect의 가로 대비 세로비율을 0.25와 1.
 
 ### ●  MAX_WIDTH_DIFF = 0.8 
 
-<img src="(image\image-20191109181749430.png">
+<img src="image\image-20191109181749430.png">
 
 첫번째 컨투어와 두번째 컨투어 사각형의 너비차이를 0.8로 설정
 
