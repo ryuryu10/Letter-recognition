@@ -48,7 +48,7 @@
 >     if frame is None:
 >         print ('frame is not exist')
 >         return None
->     
+>    
 >     # png로 압축 없이 영상 저장 
 >     cv2.imwrite('1.jpg',frame, params=[cv2.IMWRITE_PNG_COMPRESSION,0])
 >     cam.release()
@@ -171,8 +171,7 @@ gray라는 이름으로  회색으로 바뀐 사진을 저장한다.
 **contours_dict.append**에서 컨투어의 x,y,w,h,줌심좌표 x,y를 저장한다.
 
 이과정을 거치게되면 이미지가 이렇게 변한것을 볼수있다.
-
-![image-20191109172550831](image\image-20191109172550831.png)
+<img src="image\image-20191109172550831.png" alt="image\image-20191109172550831.png" />
 
 ------
 
@@ -224,7 +223,7 @@ MIN_RATIO, MAX_RATIO는 boundingRect의 가로 대비 세로비율을 0.25와 1.
 
 결과는 이렇게 나왔다.
 
-![image-20191109174622581](image\image-20191109174622581.png)
+<img src="image\image-20191109174622581.png">
 
 ------
 
@@ -243,7 +242,7 @@ MIN_RATIO, MAX_RATIO는 boundingRect의 가로 대비 세로비율을 0.25와 1.
 
 ### ●  MAX_DIAG_MULTIPLYER = 5
 
-​	![image-20191109180602476](image\image-20191109180602476.png)
+​	<img src="image\image-20191109180602476.png">
 
 첫번쨰 컨투어 사각형과 두번째 컨투어 사각형의 각각 줌점의 길이를 5로 설정했다. 
 
@@ -251,7 +250,7 @@ MIN_RATIO, MAX_RATIO는 boundingRect의 가로 대비 세로비율을 0.25와 1.
 
 
 
-![image-20191109181207249](image\image-20191109181207249.png) 
+<img src="image\image-20191109181207249.png">
 
 
 
@@ -261,19 +260,19 @@ MIN_RATIO, MAX_RATIO는 boundingRect의 가로 대비 세로비율을 0.25와 1.
 
 ### ●  MAX_AREA_DIFF = 0.5 
 
-![image-20191109181421931](image\image-20191109181421931.png) 
+<img src="image\image-20191109181421931.png">
 
 첫번째 컨투어와 두번째 컨투어 사각형 면적 차이를 0.5로 설정
 
 ### ●  MAX_WIDTH_DIFF = 0.8 
 
-![image-20191109181749430](image\image-20191109181749430.png) 
+<img src="(image\image-20191109181749430.png">
 
 첫번째 컨투어와 두번째 컨투어 사각형의 너비차이를 0.8로 설정
 
 ### ●  MAX_HEIGHT_DIFF = 0.2
 
-![image-20191109181941041](image\image-20191109181941041.png)
+<img src="image\image-20191109181941041.png">
 
 첫번째 사각형과 두번째 사각형의 높이차이가 0.2로 설정
 
@@ -358,7 +357,8 @@ diagonal_length1에다가 첫번째 사각형의 대각선 길이를 구해 저�
 
 만약  사각형의 다음과 같은 사진처럼 위치해있다면
 
-![1](image\1.jpg) 첫번째 사각형과 두번째 사각형있다고 가정할때
+<img src="image\1.jpg">
+첫번째 사각형과 두번째 사각형있다고 가정할때
 
 X의 차이가 0이고 Y만 차이나 날떄 오류를 막기위해 dx가 0일떄 angle_diff = 90처리해준다.
 
@@ -422,7 +422,7 @@ matched_result_idx에는 나온값을 최종후보에 다시 넣어준다.
 
 이제 나온값들을 사각형으로 그렸더니 다음과 같은 사진이 나왔다.
 
-![](image\2.jpg)
+<img src="image\2.jpg">
 
 ------
 
@@ -472,7 +472,7 @@ matched_result_idx에는 나온값을 최종후보에 다시 넣어준다.
 
 이게 무슨말이냐면
 
-![3](image\3.jpg)
+<img src="image\3.jpg">
 
 왼쪽에는 사각형이 위아래로 다양하게 있는데 오른쪽처럼 한줄로 나열시키는것이다.
 
@@ -512,5 +512,5 @@ img_rotated에 cv2.warpAffine()를 통해 수정된 이미지를 저장한다
 
 저장된 사진을 봤다면 다음과같이 나왔다.
 
-![5](image\5.jpg)
+<img src="image\5.jpg">
 
