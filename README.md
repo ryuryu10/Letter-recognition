@@ -498,7 +498,8 @@ img_rotated에 cv2.warpAffine()를 통해 수정된 이미지를 저장한다
 
 예시를 든다면 다음과같다
 
-![4](image\4.jpg)
+
+<img src="image\4.jpg">
 
 >```
 >img_cropped = cv2.getRectSubPix( 
