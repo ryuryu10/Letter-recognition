@@ -95,7 +95,7 @@ gray라는 이름으로  회색으로 바뀐 사진을 저장한다.
 
 또한 이미지를 좀더 구분하기 쉽게 만들기위해 검정색또는 흰색으로 분류를 해볼것이다.
 
-  ![그림](file:///C:\Users\ryury\AppData\Local\Temp\tmp594F.jpg)  
+  ![](image\tmp594F.jpg)
 
 특정값 기준으로 아래면 하얀색을 기준값보다 크면 검정색으로 처리할것이다.
 
@@ -110,11 +110,11 @@ gray라는 이름으로  회색으로 바뀐 사진을 저장한다.
 >)
 >```
 
-​	<img src="C:\Users\ryury\AppData\Roaming\Typora\typora-user-images\image-20191109170658834.png" style="zoom:25%;" /> 
+​	<img src="image\image-20191109170658834.png" style="zoom:25%;" /> 
 
  이렇게 회색으로 바꾼 이미지의 노이즈를 제거하고 색갈을 분류하게되면
 
-<img src="C:\Users\ryury\AppData\Roaming\Typora\typora-user-images\image-20191109170753673.png" alt="image-20191109170753673" style="zoom:25%;" />
+<img src="image\image-20191109170753673.png" alt="image-20191109170753673" style="zoom:25%;" />
 
 이렇게 검정색또는 하얀색으로 분류가된다.
 
@@ -137,7 +137,7 @@ gray라는 이름으로  회색으로 바뀐 사진을 저장한다.
 >cv2.drawContours(temp_result, contours=contours, contourIdx=-1, color=(255, 255, 255))
 >```
 
-<img src="C:\Users\ryury\AppData\Roaming\Typora\typora-user-images\image-20191109171619720.png" alt="image-20191109171619720" style="zoom:50%;" /> 이미지가 이렇게 변한것을 볼수있다.
+<img src="image\image-20191109171619720.png" alt="image-20191109171619720" style="zoom:50%;" /> 이미지가 이렇게 변한것을 볼수있다.
 
 ------
 
@@ -172,7 +172,7 @@ gray라는 이름으로  회색으로 바뀐 사진을 저장한다.
 
 이과정을 거치게되면 이미지가 이렇게 변한것을 볼수있다.
 
-![image-20191109172550831](C:\Users\ryury\AppData\Roaming\Typora\typora-user-images\image-20191109172550831.png)
+![image-20191109172550831](image\image-20191109172550831.png)
 
 ------
 
@@ -224,7 +224,7 @@ MIN_RATIO, MAX_RATIO는 boundingRect의 가로 대비 세로비율을 0.25와 1.
 
 결과는 이렇게 나왔다.
 
-![image-20191109174622581](C:\Users\ryury\AppData\Roaming\Typora\typora-user-images\image-20191109174622581.png)
+![image-20191109174622581](image\image-20191109174622581.png)
 
 ------
 
@@ -243,7 +243,7 @@ MIN_RATIO, MAX_RATIO는 boundingRect의 가로 대비 세로비율을 0.25와 1.
 
 ### ●  MAX_DIAG_MULTIPLYER = 5
 
-​	![image-20191109180602476](C:\Users\ryury\AppData\Roaming\Typora\typora-user-images\image-20191109180602476.png)
+​	![image-20191109180602476](image\image-20191109180602476.png)
 
 첫번쨰 컨투어 사각형과 두번째 컨투어 사각형의 각각 줌점의 길이를 5로 설정했다. 
 
@@ -251,7 +251,7 @@ MIN_RATIO, MAX_RATIO는 boundingRect의 가로 대비 세로비율을 0.25와 1.
 
 
 
-![image-20191109181207249](C:\Users\ryury\AppData\Roaming\Typora\typora-user-images\image-20191109181207249.png) 
+![image-20191109181207249](image\image-20191109181207249.png) 
 
 
 
@@ -261,19 +261,19 @@ MIN_RATIO, MAX_RATIO는 boundingRect의 가로 대비 세로비율을 0.25와 1.
 
 ### ●  MAX_AREA_DIFF = 0.5 
 
-![image-20191109181421931](C:\Users\ryury\AppData\Roaming\Typora\typora-user-images\image-20191109181421931.png) 
+![image-20191109181421931](image\image-20191109181421931.png) 
 
 첫번째 컨투어와 두번째 컨투어 사각형 면적 차이를 0.5로 설정
 
 ### ●  MAX_WIDTH_DIFF = 0.8 
 
-![image-20191109181749430](C:\Users\ryury\AppData\Roaming\Typora\typora-user-images\image-20191109181749430.png) 
+![image-20191109181749430](image\image-20191109181749430.png) 
 
 첫번째 컨투어와 두번째 컨투어 사각형의 너비차이를 0.8로 설정
 
 ### ●  MAX_HEIGHT_DIFF = 0.2
 
-![image-20191109181941041](C:\Users\ryury\AppData\Roaming\Typora\typora-user-images\image-20191109181941041.png)
+![image-20191109181941041](image\image-20191109181941041.png)
 
 첫번째 사각형과 두번째 사각형의 높이차이가 0.2로 설정
 
@@ -353,3 +353,164 @@ diagonal_length1에다가 첫번째 사각형의 대각선 길이를 구해 저�
  **np.linalg.norm()**를 통해 백터 a와 백터b 사이의 거리를 구한다.
 
 이를 이용해서 첫번째 사각형과 두번째 사각형 중점의 거리를 구해 distance에 저장한다.
+
+이제 MAX_ANGLE_DIFF를 비교하기위해 각도를 구해야한다. 
+
+만약  사각형의 다음과 같은 사진처럼 위치해있다면
+
+![1](image\1.jpg) 첫번째 사각형과 두번째 사각형있다고 가정할때
+
+X의 차이가 0이고 Y만 차이나 날떄 오류를 막기위해 dx가 0일떄 angle_diff = 90처리해준다.
+
+각도를 구하기위해 다음과 같은 구문을 사용한다.
+
+>```
+>angle_diff = np.degrees(np.arctan(dy / dx))
+>```
+
+np.arctan()을 통해 아크탄젠트값(라디안)을 구한다.
+
+구하게되면 라디안값이 나오게되는데 np.degrees()를 이용해서 라디안값을 도(각도)로  바꿔준다.
+
+>```
+>area_diff = abs(d1['w'] * d1['h'] - d2['w'] * d2['h']) / (d1['w'] * d1['h'])
+>width_diff = abs(d1['w'] - d2['w']) / d1['w']
+>height_diff = abs(d1['h'] - d2['h']) / d1['h']
+>```
+
+area_diff는 면적의 비율을, width_diff는 너비의 비율을, height_diff는 높이의 비율구한다.
+
+다 구했다면 이제 비교를 해주면된다.
+
+> ```
+>  if distance < diagonal_length1 * MAX_DIAG_MULTIPLYER \ and angle_diff < MAX_ANGLE_DIFF and area_diff < MAX_AREA_DIFF \ and width_diff < MAX_WIDTH_DIFF and height_diff < MAX_HEIGHT_DIFF:
+> ```
+
+아까 설정한 파라미터값과 비교를 해준다음 모두일치한다면 인덱스만 리스트에 저장해준다.
+
+그리고 최종 후보를 저장해준다.
+
+>```
+>matched_contours_idx.append(d2['idx'])
+>matched_contours_idx.append(d1['idx'])
+>matched_result_idx.append(matched_contours_idx
+>```
+
+
+
+이제 후보가 아닌것들을 비교할것이다.
+
+unmatched_contour_idx 라는 이름으로 리스트를 생성해주고
+
+>```
+>		for d4 in contour_list:
+>            if d4['idx'] not in matched_contours_idx:
+>                unmatched_contour_idx.append(d4['idx'])
+>		unmatched_contour = np.take(possible_contours, unmatched_contour_idx)
+>        recursive_contour_list = find_chars(unmatched_contour)
+>        for idx in recursive_contour_list:
+>            matched_result_idx.append(idx)
+>        break
+>    return matched_result_idx
+>```
+
+matched_contours_idx가 아닌것들을 unmatched_contour_idx이라는 리스트에 저장한다.
+
+np.take()를 통해  a에서 idx와 같은 인덱스의 값만 추출한다음 아까 만든 find_char함수에 재귀함수로 돌린다
+
+matched_result_idx에는 나온값을 최종후보에 다시 넣어준다.
+
+이제 나온값들을 사각형으로 그렸더니 다음과 같은 사진이 나왔다.
+
+![](image\2.jpg)
+
+------
+
+## 	남은 컨투어를 이용해 이미지를 편집하기
+
+>```
+>PLATE_WIDTH_PADDING = 1.3 
+>PLATE_HEIGHT_PADDING = 1.5 
+>MIN_PLATE_RATIO = 3
+>MAX_PLATE_RATIO = 10
+>
+>plate_imgs = []
+>plate_infos = []
+>```
+
+이렇게 값을 설정해주고
+
+이번에는 남은 컨투어를 이용해 사진을 편집할것이다
+
+물론 pytesseract의 인식률을 높이기 위해서이다.
+
+>```
+>for i, matched_chars in enumerate(matched_result): 
+>    sorted_chars = sorted(matched_chars, key=lambda x: x['cx'])
+>
+>
+>    plate_cx = (sorted_chars[0]['cx'] + sorted_chars[-1]['cx']) / 2
+>    plate_cy = (sorted_chars[0]['cy'] + sorted_chars[-1]['cy']) / 2
+>    
+>    plate_width = (sorted_chars[-1]['x'] + sorted_chars[-1]['w'] - sorted_chars[0]['x']) * PLATE_WIDTH_PADDING
+>    
+>    sum_height = 0
+>    for d in sorted_chars:
+>        sum_height += d['h']
+>
+>    plate_height = int(sum_height / len(sorted_chars) * PLATE_HEIGHT_PADDING)
+>    
+>
+>    triangle_height = sorted_chars[-1]['cy'] - sorted_chars[0]['cy']
+>    triangle_hypotenus = np.linalg.norm( 
+>        np.array([sorted_chars[0]['cx'], sorted_chars[0]['cy']]) - 
+>        np.array([sorted_chars[-1]['cx'], sorted_chars[-1]['cy']])
+>    )
+>```
+
+반복문을 사용하면서 사각형들을 X방향으로 순차적으로 한번 정렬을 해준다.
+
+이게 무슨말이냐면
+
+![3](image\3.jpg)
+
+왼쪽에는 사각형이 위아래로 다양하게 있는데 오른쪽처럼 한줄로 나열시키는것이다.
+
+>```
+>angle = np.degrees(np.arcsin(triangle_height / triangle_hypotenus))
+>```
+
+아까처럼 angle에 각도를 구하고
+
+>```
+>rotation_matrix = cv2.getRotationMatrix2D(center=(plate_cx, plate_cy), angle=angle, scale=1.0)
+>```
+
+rotation_matrix에 cv2.getRotationMatrix2D() 를 이용해서 로테이션 매트릭스를 구한다
+
+>```
+>img_rotated = cv2.warpAffine(img_thresh, M=rotation_matrix, dsize=(width, height)
+>```
+
+img_rotated에 cv2.warpAffine()를 통해 수정된 이미지를 저장한다
+
+위 2줄로 삐뚤어진 이미지를 정상적으로 회전하여 저장하는것이다.
+
+예시를 든다면 다음과같다
+
+![4](image\4.jpg)
+
+>```
+>img_cropped = cv2.getRectSubPix( 
+>        img_rotated, 
+>        patchSize=(int(plate_width), int(plate_height)), 
+>        center=(int(plate_cx), int(plate_cy))
+>    )
+>```
+
+회전된 이미지에서 cv2.getRectSubPix()를 통해 글자영역만 잘라낸다. 잘라낸사진은 img_cropped에 저장한다.
+
+저장된 사진을 봤다면 다음과같이 나왔다.
+
+![5](image\5.jpg)
+
